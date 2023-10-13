@@ -1,8 +1,8 @@
 <h5 class="text-md-center m-5">Book Flight</h5>
 
 <div class="card-body text-center" style="padding: 20px; background-color:#e5ecf26e">
-  <h6 class="card-title ">{{flight.airline}}</h6>
-  <div class="card-title" style="color: #ff3939">{{flight.remainingNumberOfSeats}} remaining seats</div>
+  <h6 class="card-title ">{{ flight.airline }}</h6>
+  <div class="card-title" style="color: #ff3939">{{ flight.remainingNumberOfSeats }} remaining seats</div>
   <div class="d-grid text-center g-2">
     <div class="row">
       <div class="col">
@@ -12,13 +12,13 @@
         </div>
         <div class="col">
           <i class="fa-solid fa-location-dot">
-            {{flight.departure?.place}}
+            {{ flight.departure?.place }}
           </i>
 
         </div>
         <div class="col m-2">
           <i class="fa-regular"></i>
-          {{flight.departure?.time | date}}
+          {{ flight.departure?.time | date }}
 
         </div>
         <div class="col">

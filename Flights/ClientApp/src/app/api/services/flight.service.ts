@@ -36,7 +36,7 @@ export class FlightService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  searchFlight$Plain$Response(params?: SearchFlight$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<FlightRm>> {
+  searchFlight$Plain$Response(params?: SearchFlight$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<FlightRm>>> {
     return searchFlight$Plain(this.http, this.rootUrl, params, context);
   }
 
@@ -46,9 +46,9 @@ export class FlightService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  searchFlight$Plain(params?: SearchFlight$Plain$Params, context?: HttpContext): Observable<FlightRm> {
+  searchFlight$Plain(params?: SearchFlight$Plain$Params, context?: HttpContext): Observable<Array<FlightRm>> {
     return this.searchFlight$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<FlightRm>): FlightRm => r.body)
+      map((r: StrictHttpResponse<Array<FlightRm>>): Array<FlightRm> => r.body)
     );
   }
 
@@ -58,7 +58,7 @@ export class FlightService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  searchFlight$Response(params?: SearchFlight$Params, context?: HttpContext): Observable<StrictHttpResponse<FlightRm>> {
+  searchFlight$Response(params?: SearchFlight$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<FlightRm>>> {
     return searchFlight(this.http, this.rootUrl, params, context);
   }
 
@@ -68,9 +68,9 @@ export class FlightService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  searchFlight(params?: SearchFlight$Params, context?: HttpContext): Observable<FlightRm> {
+  searchFlight(params?: SearchFlight$Params, context?: HttpContext): Observable<Array<FlightRm>> {
     return this.searchFlight$Response(params, context).pipe(
-      map((r: StrictHttpResponse<FlightRm>): FlightRm => r.body)
+      map((r: StrictHttpResponse<Array<FlightRm>>): Array<FlightRm> => r.body)
     );
   }
 

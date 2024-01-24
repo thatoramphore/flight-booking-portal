@@ -39,7 +39,7 @@ Flight[] flightsToSeed = new Flight[]
                 random.Next(15000, 20000).ToString(),
                 new TimePlace("London, England",DateTime.Now.AddHours(random.Next(1, 3))),
                 new TimePlace("Johannesburg",DateTime.Now.AddHours(random.Next(4, 10))),
-                    random.Next(2)),
+                    random.Next(5)),
         new (   Guid.NewGuid(),
                 "Emirates",
                 random.Next(15000, 25000).ToString(),
